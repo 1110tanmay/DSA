@@ -4,6 +4,6 @@ public class bubblesort{
         for (int i = 0;i<=number.length;i++){
             System.out.println(number[i]);
         }
-        System.out.println("sdhfl");
+        //System.out.println("sdhfl");
     }
 }
