@@ -3,21 +3,22 @@ import java.util.Scanner;
 
 public class Method{
 
-    public double Addition(double num1, double num2){
+    public static int Addition(int num1, int num2){
         return num1 + num2;
     }
 
-    public double Subtraction(double num1, double num2){
+    public static int Subtraction(int num1, int num2){
         return num1 - num2;
     }
-    public double Multiplcation(double num1, double num2){
+    public static int Multiplcation(int num1, int num2){
         return num1 * num2;
         
     }
-    public double Division(double num1, double num2){
+    public static int Division(int num1, int num2){
         return num1 / num2;
     }
     public static void main(String[] args) { //Main method
+        int result;
         Scanner myScanner = new Scanner(System.in); //Creating scanner object created.
         System.out.println("Hi there, welcome to my calculater, select an operation: 1. Addition\n2. Subtraction\n3. Multiplcation\n4. Division");
         int choice = myScanner.nextInt();
@@ -28,16 +29,16 @@ public class Method{
 
         switch (choice) {
             case 1:
-                Division(int num1,num2);
+                result = Addition(num1,num2);
                 break;
                     case 2:
-                
+                    result = Subtraction(num1, num2);
                         break;
                                 case 3:
-                
+                                result = Multiplcation(num1, num2);
                                     break;
                         case 4:
-                
+                        result = Division(num1, num2);
                      break;
                 default:
                     System.out.println("Enter a valid number!");
