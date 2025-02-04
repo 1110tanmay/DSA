@@ -2,7 +2,6 @@
 import java.util.Scanner;
 
 public class Method{
-
     public static int Addition(int num1, int num2){
         return num1 + num2;
     }
@@ -18,7 +17,7 @@ public class Method{
         return num1 / num2;
     }
     public static void main(String[] args) { //Main method
-        int result;
+        int result = 0;
         Scanner myScanner = new Scanner(System.in); //Creating scanner object created.
         System.out.println("Hi there, welcome to my calculater, select an operation: 1. Addition\n2. Subtraction\n3. Multiplcation\n4. Division");
         int choice = myScanner.nextInt();
@@ -44,5 +43,7 @@ public class Method{
                     System.out.println("Enter a valid number!");
                 break;
         }
+        System.out.println("The result is: " + result);
+        myScanner.close();
     }
 }
