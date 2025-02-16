@@ -19,6 +19,7 @@ public class Countdigits {
                 System.out.println("Do you want to continue, press 1 for yes, 0 for no. ");
                  choice = scanner.nextInt();
             } while (choice ==1);
+            System.out.println("Thank you!");
             scanner.close();
     }
 }
