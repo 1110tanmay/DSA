@@ -20,4 +20,5 @@ public static int isFactorialRec(int inp2){
 
     } 
 }
+//Factorial
   
