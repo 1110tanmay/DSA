@@ -15,4 +15,4 @@ public class Palindrome {
         System.out.println("The result is:" + isPalindrome(763));
     } 
 }
-//Not breaking the streak.
+//Not breaking the streak. 
