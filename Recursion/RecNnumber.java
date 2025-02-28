@@ -1,14 +1,12 @@
 public class RecNnumber {
-    static int ntoOne(int x){
+    static void ntoOne(int x){
         if(x==0){
-            return 0;
-        }else{
-             ntoOne(x-1);
-            System.out.println(x);
-            return x;
+            return;
         }
-    }
+            System.out.println(x);
+            ntoOne(x-1);
+        }
     public static void main(String[] args) {
-        System.out.println();
+        ntoOne(5);
     }
 }
