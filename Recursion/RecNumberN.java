@@ -1,5 +1,4 @@
 
-import javax.print.attribute.standard.NumberOfInterveningJobs;
 
 public class RecNumberN {
     int accumulator =0; 
@@ -14,6 +13,6 @@ public class RecNumberN {
     }
     public static void main(String[] args) {
        RecNumberN recNumInst = new RecNumberN(); //Created an instance of the class, since the method defined above is non-static.
-       redNumInst.numberToN(10);
+       recNumInst.numberToN(10);
     }
 }
