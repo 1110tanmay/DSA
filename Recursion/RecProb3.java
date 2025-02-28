@@ -9,6 +9,6 @@ public class RecProb3 {
         }
     }
     public static void main(String[] args) {
-        System.out.println("Hello! Recurisve output is:"+func(16));
+        System.out.println("Hello! Recurisve output is:"+func(17));
     }
 }
