@@ -4,7 +4,7 @@ public class RecProb4 {
             return 0;
         }
         fun(n/2);
-        System.out.println(n);
+        System.out.println(n%2);
         return n;
     }
     public static void main(String[] args) {
