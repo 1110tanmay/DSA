@@ -1,15 +1,19 @@
+
+import javax.print.attribute.standard.NumberOfInterveningJobs;
+
 public class RecNumberN {
-    static void numberToN(int x){
-        int accumulator =0;
+    int accumulator =0; 
+     void numberToN(int x){ 
         if(accumulator==x){
             return; //Base case, stops recursion. 
         }
         accumulator=x;
         int result = accumulator-x+1;
         System.out.println(result);//should give one.
-        numberToN(x);
+        numberToN(result+1);
     }
     public static void main(String[] args) {
-    numberToN(5);
+       RecNumberN recNumInst = new RecNumberN(); //Created an instance of the class, since the method defined above is non-static.
+       redNumInst.numberToN(10);
     }
 }
