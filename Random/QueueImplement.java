@@ -11,7 +11,7 @@ public class QueueImplement {
         queue.add("Apple");
         queue.add("Meta");
         queue.add("Tesla");
-
+            
             //Using the iterator interface to iterate through the queue
             Iterator check =  queue.iterator(); 
         while (check.hasNext()) { 
