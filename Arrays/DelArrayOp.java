@@ -1,5 +1,4 @@
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class DelArrayOp {
@@ -17,12 +16,13 @@ public class DelArrayOp {
         //             dArrayList.get(index+1) = dArrayList.get(index); 
         //     }
         // return 1;
+        System.err.println("Array before inserting the element."+dArrayList);
         dArrayList.add(number);
         return dArrayList;
     }
     
     public static void main(String[] args) {
         System.out.println("Inserting stuff in an array!");
-        System.out.println("After adding element." + dyArray(11));
+        System.out.println("After adding element:" + dyArray(11));
     }
 }
