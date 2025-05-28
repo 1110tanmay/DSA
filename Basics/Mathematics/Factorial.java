@@ -8,6 +8,7 @@ public class Factorial {
         }
         return  result;
     }
+    //recursive function
 public static int isFactorialRec(int inp2){
     if(inp2 ==0){
         return 1;
@@ -16,7 +17,7 @@ public static int isFactorialRec(int inp2){
 }
     public static void main(String[] args) {
         System.out.println("The result without recursion is:" + isFactorial(5));
-        System.out.println("The result with recursion is:"+ isFactorialRec(5));
+        System.out.println("The result with recursion is:"+ isFactorialRec(4));
 
     } 
 }
