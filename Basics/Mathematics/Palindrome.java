@@ -2,6 +2,7 @@ package Mathematics;
 
 public class Palindrome {
     static boolean isPalindrome(int inp){
+        //recursive function
         int temp=inp;
             int rev = 0;
         while(inp!=0){ //num 763
