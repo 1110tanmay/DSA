@@ -10,6 +10,7 @@ public class Factorial {
     }
     //recursive function
 public static int isFactorialRec(int inp2){
+    //base case
     if(inp2 ==0){
         return 1;
     }
