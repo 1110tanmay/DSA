@@ -7,6 +7,6 @@ public class NameArray {
         arrayString.add("Tanmay");
         arrayString.add("Shrikant");
         arrayString.add("Shelar");
-        System.err.println(arrayString);
+        System.out.println(arrayString);
     }
 }
