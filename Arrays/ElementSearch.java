@@ -7,7 +7,7 @@ public class ElementSearch {
         boolean found = false; 
         for (int i = 0;i<intArrayList.size();i++){ //To iterate through the Array
             if(intArrayList.get(i)==checkNum){
-                System.out.println("The number is present at index:" +intArrayList.get(i));
+                System.out.println("The number is present at index:" +i);
                 found =true;
             }
         }
@@ -26,6 +26,6 @@ public class ElementSearch {
     intArrayList.add(30);
     intArrayList.add(35);
     System.out.println("Entire Array:"+intArrayList);
-    checkArray(intArrayList, 17);
+    checkArray(intArrayList, 35);
     }
 }
