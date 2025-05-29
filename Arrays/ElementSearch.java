@@ -3,11 +3,17 @@ import java.util.ArrayList;
 public class ElementSearch {
     //Granting access of the Array to our function.
     static void checkArray(ArrayList<Integer> intArrayList, int checkNum){
-        int index; //To store index of the variable
+        int index;//To store index of the variable
+        boolean found = false; 
         for (int i = 0;i<intArrayList.size();i++){ //To iterate through the Array
             if(intArrayList.get(i)==checkNum){
                 System.out.println("The number is present at index:" +intArrayList.get(i));
+                found =true;
             }
+        }
+        if(found!=true)
+        {
+            System.out.print("The element is not present.");
         }
     }
     public static void main(String[] args) {
