@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 public class InsertElementArrayList {
     int inElement, index;
     //Dynamic array
@@ -17,7 +18,7 @@ public class InsertElementArrayList {
             inArrayListStatic[i]=inArrayListStatic[i+1];
         }
         inArrayListStatic[index] = inElement;
-        System.out.println("Static Array Implementation:"+inArrayListStatic);
+        System.out.println("Static Array Implementation:"+Arrays.toString(inArrayListStatic));//Need to convert to string.
     }
 
     public static void main(String[] args) {
