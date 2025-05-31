@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 public class SortedArrayCheck {
 
-    boolean checkArray(ArrayList<Integer>inArrayList){
-        for(int i=0;i<inArrayList.size();i++){
-            
+    static boolean checkArray(ArrayList<Integer>inArrayList){
+        for(int i=0;i<inArrayList.size()-1;i++){
+            if(inArrayList.get(i)>inArrayList.get(i+1)){
+                return false;
+            }
         }
         return true;
     }
@@ -14,8 +16,9 @@ public class SortedArrayCheck {
     intArrayList.add(15);
     intArrayList.add(20);
     intArrayList.add(25);
-    intArrayList.add(30);
     intArrayList.add(35);
+    intArrayList.add(40);
     System.out.println("Entire Array:"+intArrayList);
+    System.err.println("Is this error sorted?" +checkArray(intArrayList));
     }
 }
