@@ -1,30 +1,29 @@
 import java.util.ArrayList;
-public class ReverseArray {
-    static void revArray(ArrayList<Integer>intArraylist, int size){
-        int temp = 0; //To Swap
-        int lowest = 0; //0 Index, first element
-        int Highest = intArraylist.size()-1; //Last element
-        for (int i=0;i<size/2;i++){
-            if(intArraylist.get(lowest)!=intArraylist.get(Highest)){ //Until Low meets high. 
-                //Swap Logic
-                lowest=temp;
-                Highest=lowest;
-                temp=Highest;
-            }
-        }
-            System.out.println("Reversed Array:"+intArraylist);
-    }
-    public static void main(String[] args) {
-         ArrayList<Integer> intArrayList = new ArrayList<>(); //Valid syntax for ArrayList post, Java 7.
-    //Dynamic Array with 6 elements
-    intArrayList.add(10);
-    intArrayList.add(15);
-    intArrayList.add(20);
-    intArrayList.add(25);
-    intArrayList.add(35);
-    intArrayList.add(40);
-    System.out.println("Entire Array:"+intArrayList);
+public class ReverseArray{
 
-    revArray(intArrayList, 5);
-    }
+static void revArray(ArrayList<Integer>inArray){
+int low = 0;
+int high = inArray.size()-1;
+//Defining
+while(low<high){
+    //swap the values: 
+   int temp = inArray.get(low);
+    inArray.set(low, inArray.get(high));
+    inArray.set(high, temp);
+    //incrementing low and decrementing high
+    low++;
+    high--;
+}
+System.err.println("Reversed Array:"+ inArray);
+}
+
+public static void main(String[]args){
+ArrayList<Integer> inArray = new ArrayList<Integer>();
+inArray.add(10);
+inArray.add(20);
+inArray.add(30);
+inArray.add(40);
+    System.out.println("Original Array:"+inArray);
+    revArray(inArray);
+}
 }
