@@ -5,11 +5,11 @@ public class LargestElement{
         int largestElement=0;
         int currentLargest = larArray.get(0); //initializing current largest to the first element.
         for(int i=0;i<larArray.size()-1;i++){
+            if(currentLargest>largestElement){
+                largestElement=currentLargest;
+            }
             if(larArray.get(i+1)>larArray.get(i)){
                 currentLargest = larArray.get(i+1);
-            }
-            if(currentLargest>largestElement){
-                currentLargest=largestElement;
             }
         }
         System.err.println("Largest element:"+largestElement);
@@ -21,6 +21,8 @@ public static void main(String[] args) {
     larArray.add(58);
     larArray.add(42);
     larArray.add(11);
+    larArray.add(72);
+    larArray.add(80);
     System.out.println("Original Array:" + larArray);
     larArrayCheck(larArray);
 }
