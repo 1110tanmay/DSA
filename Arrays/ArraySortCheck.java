@@ -2,14 +2,20 @@ import java.util.ArrayList;
 public class ArraySortCheck {
     static void checkSortedArray(ArrayList<Integer>sortCheckArray){
         boolean flag = true;
-        while (flag==true) {
+        //while (flag==true) {
         for(int i=0;i<sortCheckArray.size()-1;i++){
             if(sortCheckArray.get(i+1)<sortCheckArray.get(i)){
                 flag = false;
             }
         }
-        System.out.println("The Array is not sorted.");
-    }
+        if (flag==false) {
+            System.out.println("The Array is not sorted.");
+        }
+        else{
+            System.out.println("The Array is sorted.");
+        }
+        
+    //}
     }
     public static void main(String[] args) {
         ArrayList<Integer> sortCheckArray = new ArrayList<>();
