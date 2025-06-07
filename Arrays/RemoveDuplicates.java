@@ -1,14 +1,15 @@
 //Check for duplicates in the given array, if match found, remove it.
-/*Thought process: 
- 1. Set current element to the first element. 
- 2. Traverse through the Array, compare each element with the current element, if match is found update it. 
- 3. Update current element to i+1 with every iteration. 
- */
 import java.util.ArrayList;
 public class RemoveDuplicates {
 static void remDup(ArrayList<Integer>inArray){
-   int currentElement = inArray.get(0);//First element always distinct.
-    
+  for(int i=0;i<inArray.size()-1;i++){ //for traversing through each element
+    for(int j=i+1;j<inArray.size();j++){ //Comparing all the elements
+        if(inArray.get(i)==inArray.get(j)){
+            inArray.remove(j);
+            j--;
+        }
+    }
+  }
    System.out.println("Duplicates removed:"+inArray);
 }
     public static void main(String[] args) {
