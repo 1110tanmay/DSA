@@ -1,3 +1,4 @@
+//Move all the zeros to the end keeping the order for the rest of elements the same.
 
 import java.util.Arrays;
 
@@ -5,7 +6,7 @@ public class ZerostoEnd {
     static void zeroToEnd(int []zToE){
         int temp = 0;
         for(int i=0;i<zToE.length-1;i++){ //for traversal of i
-            for(int j=zToE.length-1;j>1;j--){ //for traversal of j
+            for(int j=zToE.length-1;j>i;j--){ //for traversal of j
                  //swapping the values if not zero
                 if(zToE[i]==0&&zToE[j]!=0){
                     temp = zToE[i];
