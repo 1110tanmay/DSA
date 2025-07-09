@@ -1,3 +1,4 @@
+/*Left rotate the element by D times. Leetcode 189.  */
 import java.util.Arrays;
 public class LeftRotateByD {
     static void lRotatebyD(int [] numArray, int k){
