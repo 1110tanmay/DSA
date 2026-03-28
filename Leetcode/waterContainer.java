@@ -1,5 +1,6 @@
 package Leetcode;
 public class waterContainer {
+    //brute force approach
     public int maxArea(int[] height) {
         int currentMax = 0;
         int maxEver = 0;
@@ -14,6 +15,28 @@ public class waterContainer {
         }
         return maxEver;
     }
+    //optimized approach: 
+    public int optMaxArea(int [] height){
+        //Two pointers
+        int left = 0;
+        int right = (height.length)-1;
+        int currentMax=0;
+        int totalMax = 0;
+        while(left<right)   //terminating condition
+        {
+            //calculating area
+            currentMax = (right - left) * Math.min(height[left], height[right]);
+            if(height[left]<height[right]){
+                left++;
+            }else{
+                right--;
+            }
+            if(currentMax>totalMax){
+                totalMax=currentMax;
+            } 
+        }
+        return totalMax;
+    }
     public static void main(String[] args) {
         int [] height = new int[9];
         height[0]=1;
@@ -27,5 +50,6 @@ public class waterContainer {
         height[8]=7;
         waterContainer wc = new waterContainer();
         System.out.println(wc.maxArea(height));
+        System.out.println(wc.optMaxArea(height));
     }
 }
