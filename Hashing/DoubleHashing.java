@@ -11,7 +11,7 @@ public class DoubleHashing{
     //Above we use final so the values of the variables can't be changed in any instances, static so multiple copies aren't needed.
     //Constrcutor: 
     public DoubleHashing(int Capacity) {
-        cap = Capacity;
+        cap = Capacity;  
         //creating an array sized of the capacity
         nums = new int [cap];
         //Initially the size of the array is 0 since no elements have been added.
