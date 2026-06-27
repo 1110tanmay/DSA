@@ -11,9 +11,20 @@ Node nextNode;
     }
 
 }
-
 //main class
 public class BasicImplementation{
+
+    static void printLinkedList(Node firstNode){
+          //Traversal of LinkedList
+        //Setting the starting point as the current Node.
+        Node currentNode = firstNode;
+        while(currentNode!=null){
+            System.out.print(currentNode.data + " -> ");
+            //Shifting to the next node
+            currentNode = currentNode.nextNode;
+        }
+        System.out.println("null");
+    }
     public static void main(String[] args) {
         //storing values in the nodes
         Node firstNode = new Node(10);
@@ -23,13 +34,6 @@ public class BasicImplementation{
         firstNode.nextNode =  secondNode;
         secondNode.nextNode = thirdNode;
         thirdNode.nextNode = fourthNode;
-        //Setting the starting point as the current Node.
-        Node currentNode = firstNode;
-        while(currentNode!=null){
-            System.out.print(currentNode.data + " -> ");
-            //Shifting to the next node
-            currentNode = currentNode.nextNode;
-        }
-        System.out.println("null");
+        printLinkedList(firstNode);
     }
 }
