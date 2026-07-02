@@ -47,6 +47,19 @@ public class InsertionInMIddle {
             currentNode.nextNode =null;
             return n1;
         }
+        static int searchLL(Node n1, int data){
+            int position =1;
+            Node currentNode = n1;
+            while(currentNode!=null){
+                if(currentNode.data == data){
+                    return position;
+                }else{
+                currentNode=currentNode.nextNode;
+                position++;
+            }
+        }
+            return -1;
+        }
     static void printLL(Node firstNode){
         Node currentNode = firstNode;
         while(currentNode !=null){
@@ -72,5 +85,6 @@ public class InsertionInMIddle {
           printLL(n1);
           n1 = DeleteLast(n1);
           printLL(n1);
+         System.out.println(searchLL(n1, 45)); 
     }    
 }
