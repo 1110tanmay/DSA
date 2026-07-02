@@ -1,3 +1,5 @@
+
+
 class Node{
     int data;
     Node nextNode;
@@ -8,29 +10,43 @@ class Node{
     }
 }
 public class InsertionInMIddle {
-    static Node insertAnywhere(Node firstNode, int data, int toInsertPlace){
+    static Node insertAnywhere(Node n1, int data, int toInsertPlace){
         Node tempSpace = new Node(data);
         //if the position is one
         if(toInsertPlace==1){
-            tempSpace.nextNode = firstNode;
+            tempSpace.nextNode = n1;
             return tempSpace;
         }
         //traverse through the node until the position
-        Node currentNode = firstNode;
+        Node currentNode = n1;
         for(int i = 1;i<=toInsertPlace -2 && currentNode!=null;i++){
             currentNode = currentNode.nextNode;
         }
         //Making sure the position exists
         if(currentNode==null){
-            return firstNode;
+            return n1;
         }
         //rewiring, the new node needs to point towards the next node and the previous nodes then points towards the new node.
         //Current node being our neew node, points towads the position + 1 node.
         tempSpace.nextNode = currentNode.nextNode;
         //The current node points towards the new node
         currentNode.nextNode = tempSpace;
-        return firstNode;
+        return n1;
     }
+        static Node DeleteLast (Node n1){
+            if(n1 ==null){
+                return null;
+            }
+            if(n1.nextNode ==null){
+                return null;
+            }
+            Node currentNode = n1;
+            while(currentNode.nextNode.nextNode != null){
+                currentNode = currentNode.nextNode;
+            }
+            currentNode.nextNode =null;
+            return n1;
+        }
     static void printLL(Node firstNode){
         Node currentNode = firstNode;
         while(currentNode !=null){
@@ -53,6 +69,8 @@ public class InsertionInMIddle {
           n5.nextNode =n6;
           printLL(n1);
           n1= insertAnywhere(n1, 68, 5);
+          printLL(n1);
+          n1 = DeleteLast(n1);
           printLL(n1);
     }    
 }
