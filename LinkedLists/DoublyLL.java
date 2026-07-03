@@ -21,6 +21,22 @@ public class DoublyLL {
        n1.prevNode = temp;
         return temp;
     }
+    static Node insertAtEnd(Node n1, int data){
+        Node temp = new Node(data);
+        if(n1==null){
+            return temp;
+        }
+        Node currentNode = n1;
+        while(currentNode!=null){
+            if(currentNode.nexNode==null){
+                currentNode.nexNode = temp;
+                temp.prevNode = currentNode;
+                break;
+            }
+            currentNode = currentNode.nexNode;
+        }
+        return n1;
+    }
     static void printLL (Node n1){
         Node currentNode= n1;
         while(currentNode!=null){
@@ -42,6 +58,8 @@ public static void main(String[] args) {
     n4.prevNode =n3;
     printLL(n1);
     n1= insertAtStart(n1, 36);
+    printLL(n1);
+    n1 = insertAtEnd(n1, 105);
     printLL(n1);
 }
 }
