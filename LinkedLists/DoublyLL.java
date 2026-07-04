@@ -74,6 +74,24 @@ public class DoublyLL {
         n1.prevNode = null;
         return n1;
     }
+    static Node deleteEndNode(Node n1){
+        if(n1==null){
+            return null;
+        }
+        if(n1.nexNode==null){
+            return null;
+        }
+        Node prevNode =null;
+        Node currentNode = n1;
+        while(currentNode!=null){
+            if(currentNode.nexNode==null){
+                currentNode.prevNode.nexNode =null;
+                break;
+            }
+            currentNode=currentNode.nexNode;
+        }
+        return n1;
+    }
     static void printLL (Node n1){
         Node currentNode= n1;
         while(currentNode!=null){
@@ -101,6 +119,8 @@ public static void main(String[] args) {
     n1 = reverseLL(n1);
     printLL(n1);
     n1 = deleteFirstNode(n1);
+    printLL(n1);
+    n1 =deleteEndNode(n1);
     printLL(n1);
 }
 }
