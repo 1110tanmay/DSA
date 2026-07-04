@@ -59,7 +59,19 @@ public class DoublyLL {
         return prevNode;
     }
     static Node deleteFirstNode(Node n1){
-        
+        //edge cases:
+        //Case1: If the LinkedList is empty
+        if(n1==null){
+            return null;
+        }
+        //Case2: If theere is only one element
+        if(n1.nexNode==null){
+            return null;
+        }
+        //Second is the new first
+        n1 = n1.nexNode;
+        //Updating previous of the current node to null
+        n1.prevNode = null;
         return n1;
     }
     static void printLL (Node n1){
@@ -87,6 +99,8 @@ public static void main(String[] args) {
     n1 = insertAtEnd(n1, 105);
     printLL(n1);
     n1 = reverseLL(n1);
+    printLL(n1);
+    n1 = deleteFirstNode(n1);
     printLL(n1);
 }
 }
