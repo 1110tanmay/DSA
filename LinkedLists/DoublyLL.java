@@ -58,6 +58,10 @@ public class DoublyLL {
         }
         return prevNode;
     }
+    static Node deleteFirstNode(Node n1){
+        
+        return n1;
+    }
     static void printLL (Node n1){
         Node currentNode= n1;
         while(currentNode!=null){
