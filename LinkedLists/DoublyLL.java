@@ -22,6 +22,7 @@ public class DoublyLL {
         return temp;
     }
     static Node insertAtEnd(Node n1, int data){
+        
         Node temp = new Node(data);
         if(n1==null){
             return temp;
@@ -36,6 +37,26 @@ public class DoublyLL {
             currentNode = currentNode.nexNode;
         }
         return n1;
+    }
+    static Node reverseLL(Node n1){
+        //Ruling out the edge cases
+        if(n1==null||n1.nexNode ==null){
+            return n1;
+        }
+        Node currentNode = n1;
+        Node prevNode = null;
+        while(currentNode!=null){
+            //begin swapping:
+            //Step1: Setting the current's node previous to previous. 
+            prevNode = currentNode.prevNode;
+            //Step2: The previous of the current node needs to point to the next of current node:
+            currentNode.prevNode = currentNode.nexNode;
+            //Step3: The next of the current node needs to point to the previous of current node:
+            currentNode.nexNode = prevNode;
+            //Moving forward, the previous is now become next
+            currentNode = currentNode.prevNode;
+        }
+        return prevNode;
     }
     static void printLL (Node n1){
         Node currentNode= n1;
@@ -60,6 +81,8 @@ public static void main(String[] args) {
     n1= insertAtStart(n1, 36);
     printLL(n1);
     n1 = insertAtEnd(n1, 105);
+    printLL(n1);
+    n1 = reverseLL(n1);
     printLL(n1);
 }
 }
