@@ -28,6 +28,20 @@ public class CircularLL {
         }
         return n1;
     }
+    static Node insertAtB(Node n1, int data){
+        Node temp = new Node(data);
+        if(n1 ==null){
+            //the new node will point towards itself
+            return temp.nextNode =temp;
+        }
+            Node currentNode = n1;
+            while(currentNode.nextNode!=n1){
+                currentNode=currentNode.nextNode;
+            }
+                currentNode.nextNode = temp;
+                temp.nextNode = n1;
+        return temp;
+    }
     static void printLL (Node n1){
         Node currentNode= n1;
         while(currentNode!=null){
@@ -48,6 +62,7 @@ public class CircularLL {
     n3.nextNode = n4;
     n4.prevNode =n3;
     n4.nextNode = n1;
+    n1 = insertAtB(n1, 34);
     n1 = traverseCLL(n1);
     }
 }
