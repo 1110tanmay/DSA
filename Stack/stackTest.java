@@ -8,7 +8,7 @@ public class stackTest {
     }
 
     static void stackPopTest(Stack<String> testingStack){
-        System.out.println("Popped string: " + testingStack.peek());
+        System.out.println("Popped string: " + testingStack.pop());
     }
     public static void main(String[] args) {
         System.out.print("Testing Stack");
